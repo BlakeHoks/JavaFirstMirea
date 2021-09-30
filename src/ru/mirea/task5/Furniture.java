@@ -1,13 +1,16 @@
 package ru.mirea.task5;
 
 public class Furniture {
-    protected String typeOfUpholstery;
     protected String color;
     protected int height;
     protected int width;
-    protected int maxUsersWeight;
+    protected int price;
 
-    public Furniture(String typeOfUpholstery, String color, int height, int width, int maxUsersWeight){
+    public Furniture(String color, int height, int width){
+    }
+
+    public int getPrice() {
+        return price;
     }
 
     public void setHeight(int height) {
@@ -22,14 +25,6 @@ public class Furniture {
         this.color = color;
     }
 
-    public void setMaxUsersWeight(int maxUsersWeight) {
-        this.maxUsersWeight = maxUsersWeight;
-    }
-
-    public void setTypeOfUpholstery(String typeOfUpholstery) {
-        this.typeOfUpholstery = typeOfUpholstery;
-    }
-
     public int getHeight() {
         return height;
     }
@@ -40,13 +35,5 @@ public class Furniture {
 
     public int getWidth() {
         return width;
-    }
-
-    public int getMaxUsersWeight() {
-        return maxUsersWeight;
-    }
-
-    public String getTypeOfUpholstery() {
-        return typeOfUpholstery;
     }
 }

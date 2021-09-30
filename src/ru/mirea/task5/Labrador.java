@@ -10,4 +10,8 @@ public class Labrador extends Dog{
         super(age, name);
         this.breedName = "Labrador";
     }
+
+    public void Sleep(){
+        System.out.println("Zzzzzzz... he is sleeping");
+    }
 }

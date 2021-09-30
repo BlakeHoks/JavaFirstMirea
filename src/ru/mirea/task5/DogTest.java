@@ -16,6 +16,9 @@ public class DogTest {
         beg.setWeight(8);
         System.out.println(lab.getAge());
         lab.setWeight(31);
+        lab.Sleep();
+        shiba.ProtectHome();
+        beg.LookFor("rabbit");
         System.out.println(beg);
         System.out.println(lab);
         System.out.println(shiba);

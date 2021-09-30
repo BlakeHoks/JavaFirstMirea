@@ -1,6 +1,5 @@
 package ru.mirea.task10;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.Scanner;
 
 public class Functions {

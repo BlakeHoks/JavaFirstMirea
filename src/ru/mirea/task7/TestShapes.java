@@ -40,8 +40,7 @@ public class TestShapes {
         System.out.println(r2.getArea());
         System.out.println(r2.getColor());
         //System.out.println(r2.getSide()); не возможно вызвать getRadius(), т.к. класс Shape не имеет такой метод
-        System.out.println(r2.getLength());
-// Downcast Rectangle r2 to Square
+        System.out.println(r2.getLength()); // Downcast Rectangle r2 to Square
         Square sq1 = (Square)r2;
         System.out.println(sq1);
         System.out.println(sq1.getArea());

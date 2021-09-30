@@ -10,4 +10,8 @@ public class ShibaInu extends Dog{
         super(age, name);
         this.breedName = "Shiba Inu";
     }
+
+    public void ProtectHome(){
+        System.out.println("Now our house is under " + name + " protection");
+    }
 }

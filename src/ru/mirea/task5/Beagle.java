@@ -10,4 +10,8 @@ public class Beagle extends Dog{
         super(age, name);
         this.breedName = "Beagle";
     }
+
+    public void LookFor(String smth){
+        System.out.println("Our dog is looking for " + smth + ". Be ready to accept a gift");
+    }
 }

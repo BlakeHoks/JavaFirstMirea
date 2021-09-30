@@ -3,9 +3,10 @@ package ru.mirea.task5;
 public class Armchair extends Furniture{
     private String typeOfArmchair;
 
-    public Armchair(String typeOfUpholstery, String color, int height, int width, int maxUsersWeight, String typeOfArmchair){
-        super(typeOfUpholstery, color, height, width, maxUsersWeight);
+    public Armchair(String color, int height, int width, String typeOfArmchair){
+        super(color, height, width);
         this.typeOfArmchair = typeOfArmchair;
+        price = 12000;
     }
 
     public String getTypeOfArmchair() {
@@ -20,11 +21,9 @@ public class Armchair extends Furniture{
     public String toString() {
         return "Armchair{" +
                 "typeOfArmchair='" + typeOfArmchair + '\'' +
-                ", typeOfUpholstery='" + typeOfUpholstery + '\'' +
                 ", color='" + color + '\'' +
                 ", height=" + height +
                 ", width=" + width +
-                ", maxUsersWeight=" + maxUsersWeight +
                 '}';
     }
 }
