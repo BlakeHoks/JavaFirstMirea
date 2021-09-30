@@ -1,0 +1,13 @@
+package ru.mirea.task5;
+
+public class Beagle extends Dog{
+    public Beagle(int age, int height, int weight, String name){
+        super(age, height, weight, name);
+        this.breedName = "Beagle";
+    }
+
+    public Beagle(int age, String name){
+        super(age, name);
+        this.breedName = "Beagle";
+    }
+}
