@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Image extends JFrame {
     public Image(String href) throws IOException {
         super("Image");
-        setSize(1000, 600);
+        setSize(1000, 800);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         BufferedImage img = ImageIO.read(new File(href));
         JLabel label = new JLabel(new ImageIcon(img));
@@ -17,6 +17,6 @@ public class Image extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
-        new Image(args.length != 0 ? args[0] : "src/ru/mirea/task8/image/capibara.jpg").setVisible(true);
+        new Image(args.length != 0 ? args[0] : "src/ru/mirea/task8/image/begemot-9.jpg").setVisible(true);
     }
 }

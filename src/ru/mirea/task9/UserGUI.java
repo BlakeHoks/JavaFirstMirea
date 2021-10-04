@@ -6,25 +6,25 @@ import javax.swing.*;
 
 
 class UserGUI extends JFrame {
-    JButton buttonMilan = new JButton("AC Milan");
-    JButton buttonMadrid = new JButton("Real Madrid");
+    JButton buttonLiverpool = new JButton("Liverpool");
+    JButton buttonManchester = new JButton("Manchester City");
     JButton buttonFinish = new JButton("Finish");
 
-    private int milan=0 , madrid=0;
+    private int liverpool=0 , manchester=0;
 
-    JLabel result = new JLabel("Result: "+ milan +" X "+ madrid);
+    JLabel result = new JLabel("Result: "+ liverpool +" X "+ manchester);
     JLabel lastScore = new JLabel("Last Scorer: N/A");
     JLabel winner = new JLabel("Winner: DRAW");
 
 
     public UserGUI() {
-        super("Milan vs Madrid");
+        super("liverpool vs manchester");
         setDefaultCloseOperation( EXIT_ON_CLOSE);
         setSize(300, 300);
 
         JPanel gridButton = new JPanel(new GridLayout(1, 2, 5, 0) );
-        gridButton.add(buttonMilan);
-        gridButton.add(buttonMadrid);
+        gridButton.add(buttonLiverpool);
+        gridButton.add(buttonManchester);
 
         JPanel flowButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
         flowButton.add(gridButton);
@@ -43,20 +43,20 @@ class UserGUI extends JFrame {
         container.add(buttonFinish,BorderLayout.NORTH);
 
 
-        buttonMilan.addActionListener(new ActionListener() {
+        buttonLiverpool.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                milan++;
-                result.setText("Result: "+ milan +" X "+ madrid);
-                lastScore.setText("Last Scorer: AC Milan");
+                liverpool++;
+                result.setText("Result: "+ liverpool +" X "+ manchester);
+                lastScore.setText("Last Scorer: Liverpool");
             }
         });
 
-        buttonMadrid.addActionListener(new ActionListener() {
+        buttonManchester.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                madrid++;
-                result.setText("Result: "+ milan +" X "+ madrid);
-                lastScore.setText("Last Scorer: Real Madrid");
+                manchester++;
+                result.setText("Result: "+ liverpool +" X "+ manchester);
+                lastScore.setText("Last Scorer: Manchester City");
             }
         });
 
@@ -64,14 +64,14 @@ class UserGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 flowButton.setVisible(false);
-                if (madrid>milan) {
-                    winner.setText("Winner: Real Madrid");
+                if (manchester>liverpool) {
+                    winner.setText("Winner: Manchester City");
                 }
-                else if(madrid == milan){
+                else if(manchester == liverpool){
                     winner.setText("Winner: DRAW");
                 }
                 else{
-                    winner.setText("Winner: AC Milan");
+                    winner.setText("Winner: Liverpool");
                 }
             }
         });

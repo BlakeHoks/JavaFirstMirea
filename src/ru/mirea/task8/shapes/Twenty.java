@@ -5,8 +5,7 @@ import java.awt.*;
 
 public class Twenty extends JFrame {
 
-    public static Shape getRandomShape()
-    {
+    public static Shape getRandomShape() {
         int rand = (int)(Math.random() * 3);
         if (rand == 0)
             return new Rectangle();
@@ -16,22 +15,18 @@ public class Twenty extends JFrame {
             return new Square();
     }
 
-    public void paint(Graphics g)
-    {
+    public void paint(Graphics g) {
         super.paint(g);
         for (int i = 0, x = 15; i < 5; ++i, x += 280)
-            for (int j = 0, y = 35; j < 4; ++j, y += 175)
-            {
+            for (int j = 0, y = 35; j < 4; ++j, y += 175){
                 // Случайный цвет
                 int red = (int) (Math.random() * 255);
                 int green = (int) (Math.random() * 255);
                 int blue = (int) (Math.random() * 255);
-
                 // Случайная фигура
                 Shape sh = getRandomShape();
                 sh.setXY(x, y);
                 sh.setColor(new Color(red, green, blue));
-
                 // Отрисовка
                 g.setColor(sh.getColor());
                 if (sh.getClass().getSimpleName().equals("Square"))
@@ -49,8 +44,7 @@ public class Twenty extends JFrame {
 
     private static final int WIDTH = 1350;
     private static final int HEIGHT = 725;
-    public Twenty()
-    {
+    public Twenty() {
         super("Квадратики кружочки");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(WIDTH,HEIGHT);
