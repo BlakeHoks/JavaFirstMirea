@@ -1,4 +1,4 @@
-package ru.mirea.task11;
+/*package ru.mirea.task11;
 
 import javax.swing.*;
 import java.awt.*;
@@ -79,3 +79,4 @@ public class Game extends JFrame{
         new Game().setVisible(true);
     }
 }
+ */
