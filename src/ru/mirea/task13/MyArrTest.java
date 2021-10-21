@@ -1,8 +1,10 @@
-package ru.mirea.task12;
+package ru.mirea.task13;
+
+import ru.mirea.task13.MyArr;
 
 public class MyArrTest {
     public static void main(String[] args){
-        MyArr <String> Arr = new MyArr<String>(3);
+        MyArr<String> Arr = new MyArr<String>(3);
         Arr.add("lol");
         Arr.add("kek");
         Arr.add("999");

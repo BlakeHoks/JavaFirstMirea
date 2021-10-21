@@ -1,4 +1,4 @@
-package ru.mirea.task12;
+package ru.mirea.task13;
 
 import ru.mirea.task5.Pan;
 
