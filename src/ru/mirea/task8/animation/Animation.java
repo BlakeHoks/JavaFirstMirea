@@ -13,7 +13,7 @@ public class Animation extends JFrame {
     Animation(){
         super("Test");
         setLayout(new FlowLayout());
-        setSize(466,466);
+        setSize(466,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -21,7 +21,7 @@ public class Animation extends JFrame {
     @Override
     public void paint(Graphics g) {
         Graphics2D gr2d = (Graphics2D) g;
-        gr2d.drawImage(image,0,0, 466, 466, null);
+        gr2d.drawImage(image,0,0, 466, 500, null);
     }
 
 }
