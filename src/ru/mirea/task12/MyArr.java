@@ -42,11 +42,7 @@ public class MyArr<Type> {
     }
 
     public boolean isEmpty(){
-        if (length == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return length == 0;
     }
 
     public Type get(int index) throws IndexOutOfBoundsException{

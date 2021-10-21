@@ -13,6 +13,7 @@ public class MyArrTest {
         System.out.println(Arr.getLength());
         System.out.println(Arr.get(4));
         Arr.remove(3);
+        System.out.println(Arr.isEmpty());
         System.out.println(Arr);
     }
 }
