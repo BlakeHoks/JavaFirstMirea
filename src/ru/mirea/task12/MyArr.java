@@ -41,6 +41,34 @@ public class MyArr<Type> {
         length++;
     }
 
+    public boolean isEmpty(){
+        if (length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Type get(int index) throws IndexOutOfBoundsException{
+        try {
+            return (Type) arr[index];
+        } catch (IndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
+        if (index < 0 || index > length){
+            throw new IndexOutOfBoundsException();
+        }
+        return (Type) arr[index];
+    }
+
+    public void remove(int index){
+        arr[index] = null;
+        for (int i = index; i < length; i++){
+            arr[i] = arr[i + 1];
+        }
+        length--;
+    }
+
     public int getLength() {
         return length;
     }

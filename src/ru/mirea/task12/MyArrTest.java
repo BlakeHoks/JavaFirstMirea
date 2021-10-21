@@ -7,7 +7,12 @@ public class MyArrTest {
         Arr.add("kek");
         Arr.add("999");
         Arr.add("pluh");
+        System.out.println(Arr);
         Arr.add(2, "chebureck");
+        System.out.println(Arr);
+        System.out.println(Arr.getLength());
+        System.out.println(Arr.get(4));
+        Arr.remove(3);
         System.out.println(Arr);
     }
 }
