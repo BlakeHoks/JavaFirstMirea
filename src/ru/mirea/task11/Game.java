@@ -1,82 +1,52 @@
-/*package ru.mirea.task11;
+package ru.mirea.task11;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Game extends JFrame{
-    JButton buttonLiverpool = new JButton("Принять");
+public class Game extends JFrame {
 
-    private int number;
-
-    JLabel result = new JLabel("Result: "+ liverpool +" X "+ manchester);
-    JLabel lastScore = new JLabel("Last Scorer: N/A");
-    JLabel winner = new JLabel("Winner: DRAW");
-
+    JTextField numberInput = new JTextField(2);
+    JButton guessButton = new JButton("Угадать");
+    JLabel guessResult = new JLabel("");
+    int ans = 14;
+    int tries = 0;
 
     public Game() {
-        super("Guess the number");
-        setDefaultCloseOperation( EXIT_ON_CLOSE);
-        setSize(300, 300);
+        setTitle("Task1");
+        setPreferredSize(new Dimension(640, 480));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+        c.add(numberInput);
+        c.add(guessButton);
+        c.add(guessResult);
 
-        JPanel gridButton = new JPanel(new GridLayout(1, 2, 5, 0) );
-        gridButton.add(buttonLiverpool);
-
-        JPanel flowButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        flowButton.add(gridButton);
-
-        JPanel gridInfo = new JPanel(new GridLayout(3,1,5,0));
-        gridInfo.add(result);
-        gridInfo.add(lastScore);
-        gridInfo.add(winner);
-
-        JPanel flowInfo = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        flowInfo.add(gridInfo);
-
-        Container container = getContentPane();
-        container.add(flowButton, BorderLayout.SOUTH);
-        container.add(flowInfo,BorderLayout.CENTER);
-        container.add(buttonFinish,BorderLayout.NORTH);
-
-
-        buttonLiverpool.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                liverpool++;
-                result.setText("Result: "+ liverpool +" X "+ manchester);
-                lastScore.setText("Last Scorer: Liverpool");
-            }
-        });
-
-        buttonManchester.addActionListener(new ActionListener() {
+        guessButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                manchester++;
-                result.setText("Result: "+ liverpool +" X "+ manchester);
-                lastScore.setText("Last Scorer: Manchester City");
-            }
-        });
-
-        buttonFinish.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                flowButton.setVisible(false);
-                if (manchester>liverpool) {
-                    winner.setText("Winner: Manchester City");
+                if (Integer.parseInt(numberInput.getText()) == ans){
+                    guessResult.setText("Вы выиграли!");
                 }
-                else if(manchester == liverpool){
-                    winner.setText("Winner: DRAW");
+                if (Integer.parseInt(numberInput.getText()) > ans){
+                    guessResult.setText("Попробуйте число меньше");
+                    tries++;
                 }
-                else{
-                    winner.setText("Winner: Liverpool");
+                if (Integer.parseInt(numberInput.getText()) < ans) {
+                    guessResult.setText("Попробуйте число больше");
+                    tries++;
+                }
+                if (tries >= 3){
+                    guessResult.setText("Вы не угадали! Загаданное число - " + ans);
                 }
             }
         });
-
+        pack();
+        setVisible(true);
     }
 
     public static void main(String[] args) {
-        new Game().setVisible(true);
+        new Game();
     }
 }
- */
