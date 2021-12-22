@@ -1,52 +1,35 @@
 package ru.mirea.task29;
 
 import java.io.Serializable;
-import java.util.Arrays;
+import java.util.List;
 
 public class CurrencyInfo implements Serializable {
+    public String name;
+    public String country;
 
-    private static final long serialVersionUID = 1L;
 
-    private String[] countryInfo;
-    private String[] capitalInfo;
-    private String[] currencyInfo;
-
-    public CurrencyInfo(String[] countryInfo, String[] capitalInfo, String[] currencyInfo){
-        this.countryInfo = countryInfo;
-        this.capitalInfo = capitalInfo;
-        this.currencyInfo = currencyInfo;
+    public CurrencyInfo(String name, String country) {
+        this.name = name;
+        this.country = country;
     }
-
-    public String[] getCountryInfo() {
-        return countryInfo;
+    public String getCountry() {
+        return this.country;
     }
-
-    public void setCountryInfo(String[] countryInfo) {
-        this.countryInfo = countryInfo;
+    public String getName() {
+        return this.name;
     }
-
-    public String[] getCapitalInfo() {
-        return capitalInfo;
+    public void setName(String name){
+        this.name = name;
     }
-
-    public void setCapitalInfo(String[] capitalInfo) {
-        this.capitalInfo = capitalInfo;
-    }
-
-    public String[] getCurrencyInfo() {
-        return currencyInfo;
-    }
-
-    public void setCurrencyInfo(String[] currencyInfo) {
-        this.currencyInfo = currencyInfo;
+    public void setCountry(String country){
+        this.country = name;
     }
 
     @Override
     public String toString() {
-        return "SavedGame{" +
-                "Страна: " + Arrays.toString(countryInfo) +
-                ", Столица: " + Arrays.toString(capitalInfo) +
-                ", Валюта: " + Arrays.toString(currencyInfo) +
+        return "CurrencyInfo{" +
+                "name='" + name + '\'' +
+                ", country='" + country + '\'' +
                 '}';
     }
 }

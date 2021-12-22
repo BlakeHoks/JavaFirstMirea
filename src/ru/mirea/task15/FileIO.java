@@ -46,7 +46,7 @@ public class FileIO {
         }
     }
     public static void main(String[] args) {
-        File file = new File("D:\\Proj\\JavaFirstMirea\\src\\ru\\mirea\\task15\\TextFile.txt");
+        File file = new File("TextFile.txt");
         FileIO FileIO = new FileIO();
         Scanner sc = new Scanner(System.in);
         int t = 0;
