@@ -1,5 +1,7 @@
 package ru.mirea.task26;
 
+import java.util.Scanner;
+
 public class Shop {
     PayStrategy payStrategy;
     public void placeOrder(){
@@ -17,7 +19,9 @@ interface PayStrategy{
 class CardData implements PayStrategy{
     @Override
     public void paymentMethod() {
-        System.out.println("Ввод данных карты");
+        System.out.println("Введите номер карты: ");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 }
 

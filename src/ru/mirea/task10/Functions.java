@@ -73,10 +73,14 @@ public class Functions {
     }
 
     public static void main(String[] args){
+        System.out.println("15. Digits of number from right to left:");
         DigitsFromRightToLeft(56789);
-        System.out.println(NumOfMaxElems(0));
+        System.out.println("16. Number of max elements are " + NumOfMaxElems(0));
+        System.out.println("2. Numbers from 1 to 5:");
         FromCurToN(1, 5);
+        System.out.println("1. Triangular sequence:");
         TriangularSequence(4, 1);
+        System.out.println("17. Maximun of sequence are:");
         System.out.println(MaxOfSequence());
     }
 }

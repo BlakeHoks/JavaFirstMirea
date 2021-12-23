@@ -15,12 +15,14 @@ public class City {
 
     public static void main(String[] args){
         ArrayList<City> cities = new ArrayList<>();
-        cities.add(new City("Moscow", "Russia"));
-        cities.add(new City("Novomoskovsk", "Russia"));
-        cities.add(new City("Syktyvkar", "Russia"));
+        cities.add(new City("Tokio", "Japan"));
+        cities.add(new City("Kioto", "Japan"));
+        cities.add(new City("Fukuoka", "Japan"));
         cities.add(new City("London", "England"));
-        cities.add(new City("Los Angeles", "USA"));
-        cities.add(new City("New York", "USA"));
+        cities.add(new City("Manchester", "England"));
+        cities.add(new City("Detroit", "USA"));
+        cities.add(new City("Washington", "USA"));
+        cities.add(new City("Pusan", "South Korea"));
         cities.add(new City("Seoul", "South Korea"));
 
         HashMap<String, ArrayList<String>> map = new HashMap<>();

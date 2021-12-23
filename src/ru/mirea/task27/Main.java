@@ -6,20 +6,17 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args){
         HashMap<String, String> journal = new HashMap<>();
-
-        journal.put("Levitsky","Daniil");
-        journal.put("aaa1","bbb1");
-        journal.put("aaa2","bbb2");
-        journal.put("aaa3","bbb2");
-        journal.put("aaa4","bbb4");
-        journal.put("aaa5","bbb5");
-        journal.put("aaa6","bbb6");
-        journal.put("aaa7","bbb7");
-        journal.put("aaa8","bbb5");
-        journal.put("aaa9","bbb9");
-
+        journal.put("Miroshnikov","Yaroslav");
+        journal.put("Ivanov","Ivan");
+        journal.put("Petrov","Petr");
+        journal.put("Fedorov","Fedor");
+        journal.put("Kozlov","Dmitri");
+        journal.put("Ten","Dmitri");
+        journal.put("Toropov","Kirill");
+        journal.put("Ivanovich","Petr");
+        journal.put("Beliy","Artem");
+        journal.put("Krasnov","Sergey");
         HashMap<String, String> jcopy = (HashMap<String, String>) journal.clone();
-
         for (Map.Entry<String, String> i : jcopy.entrySet()) {
             for (Map.Entry<String, String> j : jcopy.entrySet()) {
                 if (i.getValue().equals(j.getValue()) && !(i.getKey().equals(j.getKey()))){
@@ -27,8 +24,6 @@ public class Main {
                 }
             }
         }
-
         System.out.println(journal);
-
     }
 }
